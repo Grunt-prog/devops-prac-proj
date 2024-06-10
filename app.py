@@ -4,10 +4,10 @@ import pymysql
 app = Flask(__name__)
 
 def get_db_connection():
-    connection = pymysql.connect(host='mydb.cylck8yh5jkc.eu-central-1.rds.amazonaws.com',  # Replace with your RDS endpoint
-                                 user='dbuser',      # Replace with your RDS username
-                                 password='dbpassword',  # Replace with your RDS password
-                                 db='devprojdb',   # Replace with your database name
+    connection = pymysql.connect(host='terraform-20240610201745273100000001.cojm7gzyzdso.ap-northeast-3.rds.amazonaws.com',  # Replace with your RDS endpoint
+                                 user='admin',      # Replace with your RDS username
+                                 password='RituAmmu19a',  # Replace with your RDS password
+                                 db='db',   # Replace with your database name
                                  charset='utf8mb4',
                                  cursorclass=pymysql.cursors.DictCursor)
     return connection
@@ -57,4 +57,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', port='5000')
