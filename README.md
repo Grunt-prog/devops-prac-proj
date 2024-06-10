@@ -1,1 +1,1 @@
-# devops-prac-proj
+# python-mysql-db-proj-1
